@@ -3,10 +3,10 @@
 
 print("Hello! Fellow Gamers.\nWelcome To The Game Name Generator!!!")
 print("\nDo you guys wanna know a fun fact?")
-print("Game Names are called as 'ING' which means In-Game Name")
+print("Game Names are called as 'IGN' which means In-Game Name")
 input("press enter to continue_")
 
-print("\nSo please answer the following questions, this will help us find the perfect ING for you.")
+print("\nSo please answer the following questions, this will help us find the perfect IGN for you.")
 
 input("press enter_")
 
