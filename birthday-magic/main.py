@@ -11,7 +11,7 @@ print("\nStep 1:"
 input("press enter for next step_")
 
 print("\nStep 2:"
-      "\nMultiply the number by 2.")
+      "\nMultiply that number by 2.")
 input("press enter for next step_")
 
 print("\nStep 3:"
@@ -28,21 +28,58 @@ print("\nStep 5:"
 input("press enter for next step_")
 
 print("\nStep 6:"
-      "\nNow for the final step, add the date you were born to the answer from step 5.")
+      "\nNow for the final step, add the date you were born on.")
 input("press enter for next step_")
 
-final_number = int(input("\nNow tell me the final answer = "))
-result = final_number - 250
-print(f"\nSo your month and date of birth is: {result}")
-print("The last two digits are your Birth date & the remaining digits are you Birth month.")
+final_answer = int(input("\nNow tell me the final answer = "))
+sub = final_answer - 250
+
+sub_str = str(sub)
+length_of_sub = len(sub_str)
+month_name = "0"
+
+if length_of_sub == 4:
+    month = sub_str[0] + sub_str[1]
+    if month == "10":
+        month_name = "October"
+    elif month == "11":
+        month_name = "November"
+    else:
+        month_name = "December"
+else:
+    month = sub_str[0]
+    if month == "1":
+        month_name = "January"
+    elif month == "2":
+        month_name = "February"
+    elif month == "3":
+        month_name = "March"
+    elif month == "4":
+        month_name = "April"
+    elif month == "5":
+        month_name = "May"
+    elif month == "6":
+        month_name = "June"
+    elif month == "7":
+        month_name = "July"
+    elif month == "8":
+        month_name = "August"
+    else:
+        month_name = "Spetember"
+
+day = sub_str[-2] + sub_str[-1]
+print(f"You were born on {day} {month_name}")
 
 
 # Python Concepts Used / Practised:
 # - print() function
 # - input() function
-# - line break, \n
 # - Variables
-# - Arithmetic operators [-]
-# - Type casting, int()
-# - f String
-
+# - Type casting, str(), int()
+# - String concatenation, +
+# - Arithmetic operator (-)
+# - Line break, \n
+# - Subscripting: indexing
+# - Condititonal statement: if, elif, else
+# - length() function
+# - Comparison operator, ==
